@@ -31,15 +31,66 @@
   width: 40%;
 }
 
+.artist {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music-player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.horiz-control {
+  width: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .time-control {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.time-control input {
+  width: 100%;
+}
+
+.time-control p {
+  padding: 1rem;
 }
 
 .play-control {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+}
+
+.play-control svg {
+  cursor: pointer;
+}
+
+.volume-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+}
+
+.vc-input {
+  transform: rotate(270deg);
+}
+
+.mute svg {
+  cursor: pointer;
 }
 
 .right {
