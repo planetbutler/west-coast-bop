@@ -8,7 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #AD94A9;
 }
+ header {
+  height: 13vh;
+  font-size: 8vh;
+  padding: 1rem 0 0 0;
+ }
 
 .body {
   display: flex;
@@ -29,19 +35,46 @@
   flex-direction: column;
   align-items: center;
   width: 40%;
+  background: white;
 }
 
 .artist {
-  min-height: 60vh;
+  background-image: url("vids/tv.jpeg");
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: top;
+  min-height: 80vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border: solid yellow 1px;
+}
+
+.artist img {
+  width: 45%;
+  height: auto;
+  border-radius: 36px;
+  position: relative;
+  left: -2.5%;
+  top: 11%;
+  opacity:0.6;
+}
+
+artist h2 {
+  padding: 3rem 1rem 1rem 1rem;
+}
+.artist h3 {
+  font-size: 1rem;
 }
 
 .music-player {
   min-height: 20vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  border: solid red 1px;
 }
 
 .horiz-control {
@@ -49,6 +82,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: solid blue 2px;
 }
 
 .time-control {
@@ -83,6 +117,7 @@
   justify-content: space-between;
   align-items: center;
   width: 10%;
+  border: solid green 2px;
 }
 
 .vc-input {
@@ -98,4 +133,8 @@
   flex-direction: column;
   align-items: center;
   width: 30%;
+}
+
+.bios {
+  min-height: 60vh;
 }
