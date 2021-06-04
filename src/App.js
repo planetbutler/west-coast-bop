@@ -10,14 +10,14 @@ function App() {
     <div className="App">
       <h1>The Trumpets of West Coast BeBop</h1>
       <div className="body">
-        <div>
+        <div className="left">
           <Library/>
         </div>
         <div className="center">
           <Artist/>
           <MusicPlayer/>
         </div>
-        <div>
+        <div className="right">
           <Bio/>
         </div>
       </div>

@@ -4,12 +4,47 @@
   box-sizing: border-box;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .body {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
 }
 
 .center {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.time-control {
+  display: flex;
+  flex-direction: row;
+}
+
+.play-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
 }
