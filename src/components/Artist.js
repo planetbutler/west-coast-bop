@@ -4,8 +4,8 @@ const Artist = ({currentArtist}) => {
     return (
         <div className="artist">
             <img src={currentArtist.vid} alt="video" />
-            <h1>{currentArtist.name}</h1>
-            <h1>{currentArtist.title}</h1>
+            <h2>{currentArtist.name}</h2>
+            <h3>{currentArtist.title}</h3>
         </div>
     )
 }

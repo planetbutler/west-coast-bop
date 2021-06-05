@@ -11,21 +11,21 @@ import data from './data.js';
 function App() {
   //state
   const [artists, setArtists] = useState(data());
-  const [currentArtist, setCurrentArtist] = useState(artists[0]);
+  const [currentArtist, setCurrentArtist] = useState(artists[4]);
 
   return (
     <div className="App">
-      <h1>The Trumpets of West Coast BeBop</h1>
+      <header>The Trumpets of West Coast BeBop</header>
       <div className="body">
         <div className="left">
           <Library/>
         </div>
         <div className="center">
           <Artist currentArtist={currentArtist}/>
-          <MusicPlayer/>
         </div>
         <div className="right">
           <Bio/>
+          <MusicPlayer/>
         </div>
       </div>
     </div>
