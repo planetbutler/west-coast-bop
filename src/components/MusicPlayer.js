@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause, faAngleLeft, faAngleRight, faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons'
 
-const MusicPlayer = () => {
+const MusicPlayer = ({currentArtist, isPlaying, setIsPlaying}) => {
+//ref
+const audioRef = useRef(null);
+
+//event handler
+const playTuneHandler = () => {
+    if(isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(!isPlaying);
+    } else {
+        audioRef.current.play();
+        setIsPlaying(!isPlaying);
+    }
+}
+
     return (
         <div className="music-player">
             <div className="horiz-control">
@@ -13,9 +27,10 @@ const MusicPlayer = () => {
                 </div>
                 <div className="play-control">
                     <FontAwesomeIcon className="skip-back" size="2x" icon={ faAngleLeft } />
-                    <FontAwesomeIcon className="play" size="2x" icon={ faPlay } />
+                    <FontAwesomeIcon onClick={ playTuneHandler} className="play" size="2x" icon={ faPlay } />
                     <FontAwesomeIcon className="skip-forward" size="2x" icon={ faAngleRight } />
                 </div>
+                <audio ref={audioRef} src={currentArtist.tune}></audio>
             </div>
             <div className="volume-control">
                 <div className="vc-input">

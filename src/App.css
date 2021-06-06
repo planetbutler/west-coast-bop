@@ -9,10 +9,12 @@
   flex-direction: column;
   align-items: center;
   background: #AD94A9;
+  height: 100vh;
+  font-family: 'Fontdiner Swanky', cursive;
 }
  header {
   height: 13vh;
-  font-size: 8vh;
+  font-size: 7vh;
   padding: 1vh 0 0 0;
  }
 
@@ -31,6 +33,7 @@
 }
 
 .center {
+  font-family: 'Fontdiner Swanky', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +43,7 @@
 }
 
 .artist {
+  font-family: 'Fontdiner Swanky', cursive;
   background-image: url("vids/tv.jpeg");
   background-repeat: no-repeat;
   background-size: 80% auto;
@@ -61,7 +65,7 @@
   border-radius: 36px;
   position: relative;
   left: -2.5%;
-  top: 11%;
+  top: 12%;
   opacity:0.6;
 }
 

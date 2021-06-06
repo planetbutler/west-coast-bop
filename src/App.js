@@ -11,7 +11,8 @@ import data from './data.js';
 function App() {
   //state
   const [artists, setArtists] = useState(data());
-  const [currentArtist, setCurrentArtist] = useState(artists[4]);
+  const [currentArtist, setCurrentArtist] = useState(artists[7]);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <div className="App">
@@ -25,7 +26,10 @@ function App() {
         </div>
         <div className="right">
           <Bio/>
-          <MusicPlayer/>
+          <MusicPlayer 
+          setIsPlaying={setIsPlaying}
+          isPlaying={isPlaying}
+          currentArtist={currentArtist} />
         </div>
       </div>
     </div>
