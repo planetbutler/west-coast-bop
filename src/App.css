@@ -46,10 +46,19 @@
   background-color: #E1D286;
 }
 
+.roster-players {
+  overflow: scroll;
+}
+
 .roster-players img {
   width: 30%;
   border-radius: 7px;
   margin: 2rem 0rem 0rem 0rem;
+  cursor: pointer;
+}
+
+.roster-players :hover {
+  background-color: aquamarine;
 }
 
 .center {
