@@ -3,7 +3,7 @@ import './App.css';
 //adding components
 import Artist from './components/Artist';
 import MusicPlayer from './components/MusicPlayer';
-import Library from './components/Library';
+import Roster from './components/Roster';
 import Bio from './components/Bio';
 //import data file
 import data from './data.js';
@@ -19,7 +19,7 @@ function App() {
       <header>The Trumpets of West Coast BeBop</header>
       <div className="body">
         <div className="left">
-          <Library/>
+          <Roster artists={artists}/>
         </div>
         <div className="center">
           <Artist currentArtist={currentArtist}/>
