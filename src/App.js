@@ -11,7 +11,7 @@ import data from './data.js';
 function App() {
   //state
   const [artists, setArtists] = useState(data());
-  const [currentArtist, setCurrentArtist] = useState(artists[7]);
+  const [currentArtist, setCurrentArtist] = useState(artists[2]);
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (

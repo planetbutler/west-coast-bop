@@ -48,15 +48,23 @@
   background-repeat: no-repeat;
   background-size: 80% auto;
   background-position: top;
-  min-height: 80vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: solid yellow 1px;
-  color: white;
   border-radius: 25px;
+}
+
+.artistImg {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .artist img {
@@ -65,9 +73,15 @@
   border-radius: 36px;
   position: relative;
   left: -2.5%;
-  top: 12%;
-  opacity:0.6;
+  top: 14%;
+  opacity: 0.6;
 }
+
+.vid-text {
+  text-align: center;
+}
+
+
 
 artist h2 {
   padding: 3rem 1rem 1rem 1rem;
@@ -75,6 +89,7 @@ artist h2 {
 .artist h3 {
   font-size: 1rem;
 }
+
 
 .music-player {
   min-height: 20vh;

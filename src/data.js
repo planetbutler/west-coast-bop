@@ -1,13 +1,22 @@
 import { v4 as uuidv4 } from "uuid";
 import Don from './vids/Don.gif';
+import DonGhost from './vids/DonGhost.gif';
 import Buddy from './vids/Buddy.gif';
+import BuddyGhost from './vids/BuddyGhost.gif';
 import Chet from './vids/Chet.gif';
+import ChetGhost from './vids/ChetGhost.gif';
 import Clifford from './vids/Clifford.gif';
+import CliffordGhost from './vids/CliffordGhost.gif';
 import Jack from './vids/Jack.gif';
+import JackGhost from './vids/JackGhost.gif';
 import Stu from './vids/Stu.gif';
+import StuGhost from './vids/StuGhost.gif';
 import RunBuddy from './vids/RunBuddy.gif';
+import RunBuddyGhost from './vids/RunBuddyGhost.gif';
 import Conte from './vids/Conte.gif';
+import ConteGhost from './vids/ConteGhost.gif';
 import Rugolo from './vids/Rugolo.gif';
+import RugoloGhost from './vids/RugoloGhost.gif';
 import WhatIsThereToSay from './tunes/WhatIsThereToSay.mp3';
 import CarnivalOfVenice from './tunes/CarnivalOfVenice.mp3';
 import Daahoud from './tunes/Daahoud.mp3';
@@ -23,7 +32,8 @@ function musicSource() {
     return [
         {
         name: "Conte Candoli",
-        vid: Conte,    
+        vid: Conte, 
+        ghostVid: ConteGhost,   
         title: "Jazz City Blues",   
         id: uuidv4(),
         active: true,
@@ -43,6 +53,7 @@ function musicSource() {
         {
         name: "Don Fagerquist",    
         vid: Don,
+        ghostVid: DonGhost,
         title: "The Song is You",
         id: uuidv4(),
         active: false,
@@ -66,6 +77,7 @@ function musicSource() {
         {
         name: "Chet Baker",    
         vid: Chet,
+        ghostVid: ChetGhost,
         title: "A Little Duet for Zoot and Chet",
         id: uuidv4(),
         active: false,
@@ -87,6 +99,7 @@ function musicSource() {
         {
         name: "Jack Sheldon",    
         vid: Jack,
+        ghostVid: JackGhost,
         title: "What Is There To Say",
         id: uuidv4(),
         active: false,
@@ -119,6 +132,7 @@ function musicSource() {
         {
         name: "Clifford Brown",    
         vid: Clifford,
+        ghostVid: CliffordGhost,
         title: "Daahoud",
         id: uuidv4(),
         active: false,
@@ -145,6 +159,7 @@ function musicSource() {
         {
         name: "Buddy Childers",    
         vid: Buddy,
+        ghostVid: BuddyGhost,
         title: "Bernie's Tune",
         id: uuidv4(),
         active: false,
@@ -166,6 +181,7 @@ function musicSource() {
         {
         name: "Stu Williamson",    
         vid: Stu,
+        ghostVid: StuGhost,
         title: "The Lady is a Tramp",
         id: uuidv4(),
         active: false,
@@ -192,6 +208,7 @@ function musicSource() {
         {
         name: "Jack Sheldon",    
         vid: RunBuddy,
+        ghostVid: RunBuddyGhost,
         title: "You Fascinate Me So",
         id: uuidv4(),
         active: false,
@@ -224,6 +241,7 @@ function musicSource() {
         {
         name: "Buddy Childers",    
         vid: Buddy,
+        ghostVid: BuddyGhost,
         title: "Sentimental Sam",
         id: uuidv4(),
         active: false,
@@ -245,6 +263,7 @@ function musicSource() {
         {
         name: "Who's Who of 50's LA Studio Trumpets",    
         vid: Rugolo,
+        ghostVid: RugoloGhost,
         title: "Carnival of Venice",
         id: uuidv4(),
         active: false,
