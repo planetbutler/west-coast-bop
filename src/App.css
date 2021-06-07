@@ -96,11 +96,11 @@ artist h2 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 1rem 2rem;
 }
 
 .time-control input {
   width: 100%;
+  padding: 1rem 0rem;
 }
 
 .time-control p {
