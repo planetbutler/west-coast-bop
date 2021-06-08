@@ -47,6 +47,10 @@
   box-shadow: 0 0 8px 8px black inset;
 }
 
+.selected {
+  background: #8AC6BD;
+}
+
 .roster-players {
   overflow: scroll;
 }
@@ -114,7 +118,7 @@
   cursor: pointer;
 }
 
-artist h2 {
+.artist h2 {
   padding: 3rem 1rem 1rem 1rem;
 }
 .artist h3 {
