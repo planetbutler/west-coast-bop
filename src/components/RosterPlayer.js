@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const RosterPlayer = ({ artist, artists, setCurrentArtist, id, audioRef, isPlaying, setArtists }) => {
     const artistSelectHandler = () => {

@@ -51,6 +51,8 @@ function App() {
         <div className="right">
           <Bio/>
           <MusicPlayer
+          setCurrentArtist={setCurrentArtist}
+          artists={artists}
           setTuneInfo={setTuneInfo}
           tuneInfo={tuneInfo}
           audioRef={audioRef} 
