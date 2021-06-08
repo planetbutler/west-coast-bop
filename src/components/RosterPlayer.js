@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 
-const RosterPlayer = ({ artist }) => {
-    
+const RosterPlayer = ({ artist, artists, setCurrentArtist, id }) => {
+    const artistSelectHandler = () => {
+        setCurrentArtist(artist);
+    }
+
     return (
  
-        <div className="roster-player">
+        <div onClick={artistSelectHandler} className="roster-player">
             <div className="miniImg">
                 <img src={ artist.vid } alt={artist.name} />  
                 <h4>{artist.name}</h4>

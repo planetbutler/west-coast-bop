@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
+
 
 const Artist = ({currentArtist}) => {
     const ghostify = () =>  setIsGhost(!isGhost)
@@ -15,7 +18,8 @@ const Artist = ({currentArtist}) => {
             <div className="vid-text"> 
                 <h2>{currentArtist.name}</h2>
                 <h3>{currentArtist.title}</h3>  
-                <button onClick={ghostify}>Ghostify</button>
+                <FontAwesomeIcon className="ghostBtn" onClick={ghostify} size="2x" icon={faGhost} />
+                <p>Ghostify</p>
             </div>
         </div>
 

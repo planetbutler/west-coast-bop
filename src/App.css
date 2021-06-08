@@ -44,6 +44,7 @@
   border: solid black 1px;
   border-radius: 25px;
   background-color: #E1D286;
+  box-shadow: 0 0 8px 8px black inset;
 }
 
 .roster-players {
@@ -103,14 +104,15 @@
   position: relative;
   left: -2.5%;
   top: 14%;
-  opacity: 0.6;
 }
 
 .vid-text {
   text-align: center;
 }
 
-
+.ghostBtn {
+  cursor: pointer;
+}
 
 artist h2 {
   padding: 3rem 1rem 1rem 1rem;

@@ -11,7 +11,7 @@ import data from './data.js';
 function App() {
   //state
   const [artists, setArtists] = useState(data());
-  const [currentArtist, setCurrentArtist] = useState(artists[2]);
+  const [currentArtist, setCurrentArtist] = useState(artists[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
@@ -19,7 +19,9 @@ function App() {
       <header>The Trumpets of West Coast BeBop</header>
       <div className="body">
         <div className="left">
-          <Roster artists={artists}/>
+          <Roster 
+          artists={artists}
+          setCurrentArtist={setCurrentArtist}/>
         </div>
         <div className="center">
           <Artist currentArtist={currentArtist}/>
