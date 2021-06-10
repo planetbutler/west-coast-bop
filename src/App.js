@@ -55,7 +55,8 @@ const tuneEndHandler = async () => {
           <Artist currentArtist={currentArtist}/>
         </div>
         <div className="right">
-          <Bio/>
+          <Bio
+          currentArtist={currentArtist}/>
           <MusicPlayer
           setArtists={setArtists}
           setCurrentArtist={setCurrentArtist}

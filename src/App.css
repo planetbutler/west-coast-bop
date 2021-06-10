@@ -40,7 +40,7 @@
   text-align: center;
   align-items: center;
   width: 20rem;
-  height: 100%;
+  height: 80vh;
   border: solid black 1px;
   border-radius: 25px;
   background-color: #E1D286;
@@ -124,7 +124,38 @@
 .artist h3 {
   font-size: 1rem;
 }
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  font-family: 'Lato', sans-serif;
+}
+.bios {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background: #8AC6BD;
+  box-shadow: 2px 2px 50px rgb(204, 204, 204);
+  overflow: scroll;
+  
+}
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 2px black;
+  width: 80%;
+  height: 60%;
+  overflow: hidden;
+  background: #F0D39D;
+  border-radius: 25px;
+}
 
 .music-player {
   min-height: 20vh;
@@ -185,14 +216,5 @@
   cursor: pointer;
 }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-  font-family: 'Lato', sans-serif;
-}
 
-.bios {
-  min-height: 60vh;
-}
+

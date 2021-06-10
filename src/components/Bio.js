@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Bio = () => {
+const Bio = ({currentArtist}) => {
     return (
         <div className="bios">
-            <h1>Bios</h1>
+          <div className="text-container">
+            <marquee behavior="scroll" direction="up" scrollamount="2">
+              {currentArtist.bio}
+            </marquee>
+          </div>
         </div>
     )
 }
