@@ -26,6 +26,11 @@ function App() {
   currentTime: 0,
   duration: 0,
 })
+const tuneEndHandler = async () => {
+  let currentIndex = artists.findIndex((artist) => artist.id === currentArtist.id);
+  await setCurrentArtist(artists[(currentIndex + 1) % artists.length])
+  if(isPlaying) audioRef.current.play();
+};
 
   return (
     <div className="App">
@@ -42,7 +47,8 @@ function App() {
             onLoadedMetadata={timeUpdateHandler}
             onTimeUpdate={timeUpdateHandler} 
             ref={audioRef} 
-            src={currentArtist.tune}>
+            src={currentArtist.tune}
+            onEnded={tuneEndHandler}>
           </audio>
         </div>
         <div className="center">
@@ -51,6 +57,7 @@ function App() {
         <div className="right">
           <Bio/>
           <MusicPlayer
+          setArtists={setArtists}
           setCurrentArtist={setCurrentArtist}
           artists={artists}
           setTuneInfo={setTuneInfo}

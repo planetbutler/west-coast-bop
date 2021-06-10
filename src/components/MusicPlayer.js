@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, 
     faPause, 
     faAngleLeft, 
     faAngleRight, 
     faVolumeMute, 
-    faVolumeUp } from '@fortawesome/free-solid-svg-icons'
+    faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 const MusicPlayer = ({
+    setArtists,
     artists, 
     currentArtist, 
     isPlaying, 
@@ -16,7 +17,23 @@ const MusicPlayer = ({
     tuneInfo, 
     setTuneInfo, 
     setCurrentArtist }) => {
-
+//use effect
+useEffect(() => {
+    const newArtist = artists.map((artist) => {
+        if(artist.id === currentArtist.id) {
+            return {
+                ...artist,
+                active: true,
+            }
+        } else {
+            return {
+                ...artist, 
+                active: false,
+            }
+        }
+    })
+    setArtists(newArtist);
+},[currentArtist]);
 //event handler
 const playTuneHandler = () => {
     if(isPlaying) {
@@ -38,19 +55,21 @@ const dragHandler = (e) => {
     setTuneInfo({...tuneInfo, currentTime: e.target.value})
 };
 
-const skipTrackHandler = (direction) => {
+const skipTrackHandler = async (direction) => {
     let currentIndex = artists.findIndex((artist) => artist.id === currentArtist.id);
+    if(direction === 'skip-forward') {
+        await setCurrentArtist(artists[(currentIndex + 1) % artists.length])
+    }
     if(direction === 'skip-back') {
-        setCurrentArtist(artists[(currentIndex - 1) % artists.length])
         if((currentIndex -1) % artists.length === -1) {
-            setCurrentArtist(artists[artists.length - 1]);
+            await setCurrentArtist(artists[artists.length - 1]);
+            if(isPlaying) audioRef.current.play();
             return;
         }
+        await setCurrentArtist(artists[(currentIndex - 1) % artists.length])
     }
-    if(direction === 'skip-forward') {
-        setCurrentArtist(artists[(currentIndex + 1) % artists.length])
-    }
-}
+    if(isPlaying) audioRef.current.play();
+};
 
 
 const [isMuted, setIsMuted] = useState(false)
@@ -74,7 +93,7 @@ const setVolume = (e) => {
         <div className="music-player">
             <div className="horiz-control">
                 <div className="time-control">
-                    <p>{getTime(tuneInfo.currentTime)}</p>
+                    <p>{tuneInfo.duration ? getTime(tuneInfo.currentTime) : "0:00"}</p>
                     <input 
                     min={0} 
                     max={tuneInfo.duration || 0} 

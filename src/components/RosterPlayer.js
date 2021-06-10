@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+
 
 const RosterPlayer = ({ artist, artists, setCurrentArtist, id, audioRef, isPlaying, setArtists }) => {
-    const artistSelectHandler = () => {
-        setCurrentArtist(artist);
+    const artistSelectHandler = async () => {
+        await setCurrentArtist(artist);
         audioRef.current.play();
         //add active state
         const newArtist = artists.map((artist) => {
@@ -19,16 +20,9 @@ const RosterPlayer = ({ artist, artists, setCurrentArtist, id, audioRef, isPlayi
             }
         })
         setArtists(newArtist);
-        //checkif tune is playing
-        if(isPlaying) {
-            const playPromise = audioRef.current.play();
-            if(playPromise !== undefined) {
-                playPromise.then((audio) => {
-                    audioRef.current.play();
-                })
-            }
-        }
-    }
+
+        if(isPlaying) audioRef.current.play();
+    };
     
     return (
  
