@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGhost } from '@fortawesome/free-solid-svg-icons'
+import { faGhost, faMale } from '@fortawesome/free-solid-svg-icons'
 
 
 const Artist = ({currentArtist}) => {
@@ -12,17 +12,20 @@ const Artist = ({currentArtist}) => {
     return (
  
         <div className="artist">
-            <div className="artistImg">
+            <div className="gifContainer">
                 <img src={isGhost ? currentArtist.vid : currentArtist.ghostVid} alt={currentArtist.name} /> 
             </div>
             <div className="vid-text"> 
                 <h2>{currentArtist.name}</h2>
+                <br/>
                 <h3>{currentArtist.title}</h3>  
-                <FontAwesomeIcon className="ghostBtn" onClick={ghostify} size="2x" icon={faGhost} />
-                <p>Ghostify</p>
+                <p onClick={ghostify}>{isGhost ? 'Ghostify' : 'Unghost'} &nbsp;<FontAwesomeIcon 
+                className="ghostBtn" 
+                onClick={ghostify} 
+                size="2x" 
+                icon={isGhost ? faGhost : faMale} /></p>
             </div>
         </div>
-
     )
 }
 

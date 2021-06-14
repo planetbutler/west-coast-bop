@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #AD94A9;
   height: 100vh;
   font-family: 'Fontdiner Swanky', cursive;
 }
@@ -41,18 +40,18 @@
   align-items: center;
   width: 20rem;
   height: 80vh;
-  border: solid black 1px;
+  border: solid aquamarine 10px;
   border-radius: 25px;
-  background-color: #E1D286;
-  box-shadow: 0 0 8px 8px black inset;
+
 }
 
 .selected {
-  background: #8AC6BD;
+  border: solid #F91C0C 5px;
+  border-radius: 25px;
 }
 
 .roster-players {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .roster-players img {
@@ -64,36 +63,35 @@
 
 .roster-players :hover {
   background-color: aquamarine;
+  border-radius: 25px;
 }
 
 .center {
-  font-family: 'Fontdiner Swanky', cursive;
   display: flex;
   flex-direction: column;
+  
   align-items: center;
   width: 40%;
-  background: white;
-  border-radius: 25px;
 }
 
 .artist {
   font-family: 'Fontdiner Swanky', cursive;
-  background-image: url("vids/tv.jpeg");
+  background-image: url("vids/tv2.jpg");
   background-repeat: no-repeat;
-  background-size: 80% auto;
+  background-size: 100% auto;
   background-position: top;
   height: 80vh;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid yellow 1px;
+  border: solid #F6830F 10px;
   border-radius: 25px;
 }
 
-.artistImg {
-  min-height: 80vh;
+.gifContainer {
+  height: 80.5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,19 +100,48 @@
 }
 
 .artist img {
-  width: 45%;
+  width: 61%;
   height: auto;
   border-radius: 36px;
   position: relative;
   left: -2.5%;
-  top: 14%;
+  top: 8vh;
 }
 
 .vid-text {
+  position: absolute;
+  width: 30%;
+  top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   text-align: center;
+  height: 5.5vh;
+  border: solid red 1px;
+}
+
+.vid-text h2 {
+  height: 4vh;
+  font-size: 1rem;
+}
+
+.vid-text h3 {
+  font-size: 0.5rem;
+}
+
+.vid-text p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+  width: 100%;
 }
 
 .ghostBtn {
+  cursor: pointer;
+}
+
+.vid-text p {
   cursor: pointer;
 }
 
@@ -139,9 +166,10 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background: #8AC6BD;
   box-shadow: 2px 2px 50px rgb(204, 204, 204);
-  overflow: scroll;
+  overflow: hidden;
+  border-radius: 25px;
+  border: solid #A489A0 10px;
   
 }
 
@@ -149,34 +177,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: solid 2px black;
-  width: 80%;
-  height: 60%;
-  overflow: hidden;
-  background: #F0D39D;
-  border-radius: 25px;
+  width: 90%;
+  height: 90%;
 }
 
 .music-player {
-  min-height: 20vh;
-  width: 100%;
+  height: 24vh;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  border: solid red 1px;
+  justify-content: space-between;
+  border: solid #F91C0C 10px;
+  border-radius: 25px;;
 }
 
 .horiz-control {
-  width: 90%;
+  width: 80%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: solid blue 2px;
+  border-radius: 25px;
 }
 
 .time-control {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 12vh;
 }
 
 .time-control input {
@@ -193,6 +220,7 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  height: 12vh;
 }
 
 .play-control svg {
@@ -204,15 +232,33 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 10%;
-  border: solid green 2px;
+  width: 20%;
+  height: 20vh;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .vc-input {
+  display: flex;
+  flex-direction: row;
+  align-content: left;
   transform: rotate(270deg);
+  width: 9vw;
+  height: 40%;
+  padding: 0;
+  margin: 0;
+}
+.vc-input input {
+  width: 70%;
+  align-items: right;
 }
 
+
+
 .mute svg {
+
   cursor: pointer;
 }
 

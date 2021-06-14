@@ -261,7 +261,7 @@ function musicSource() {
             </ul>
         },
         {
-        name: "Who's Who of 50's LA Studio Trumpets",    
+        name: "Who's Who of LA Studio Trumpets",    
         vid: Rugolo,
         ghostVid: RugoloGhost,
         title: "Carnival of Venice",
