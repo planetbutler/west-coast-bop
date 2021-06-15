@@ -10,18 +10,22 @@
   align-items: center;
   height: 100vh;
   font-family: 'Fontdiner Swanky', cursive;
+  border: solid 2px red;
 }
  header {
-  height: 13vh;
-  font-size: 7vh;
-  padding: 1vh 0 0 0;
+  min-height: 13%;
+  font-size: 40px;
+  padding: 1% 0 0 0;
+  border: solid 2px blue;
  }
 
 .body {
+  height: 87%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  border: solid 2px green;
 }
 
 .left {
@@ -38,8 +42,8 @@
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  width: 20rem;
-  height: 80vh;
+  width: 80%;
+  height: 95%;
   border: solid aquamarine 10px;
   border-radius: 25px;
 
@@ -57,7 +61,7 @@
 .roster-players img {
   width: 30%;
   border-radius: 7px;
-  margin: 2rem 0rem 0rem 0rem;
+  margin: 6% 0% 0% 0%;
   cursor: pointer;
 }
 
@@ -69,7 +73,6 @@
 .center {
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   width: 40%;
 }
@@ -79,8 +82,8 @@
   background-image: url("vids/tv2.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: top;
-  height: 80vh;
+  background-position: center;
+  height: 95%;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -91,7 +94,7 @@
 }
 
 .gifContainer {
-  height: 80.5vh;
+  height: 80.5%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -104,29 +107,31 @@
   height: auto;
   border-radius: 36px;
   position: relative;
-  left: -2.5%;
-  top: 8vh;
+  left: -2.4%;
+  top: -0%;
 }
 
 .vid-text {
-  position: absolute;
-  width: 30%;
-  top: 5vh;
+  /*position: absolute;*/
+  width: 80%;
+  /*top: 12%;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-  height: 5.5vh;
-  border: solid red 1px;
+  /*height: 5.5%;*/
 }
 
 .vid-text h2 {
-  height: 4vh;
-  font-size: 1rem;
+  /*height: 20%;*/
+  font-size: 17px;
+  text-shadow: 3px 3px white;
 }
 
 .vid-text h3 {
-  font-size: 0.5rem;
+  /*height: 30%;*/
+  font-size: 14px;
+  text-shadow: 3px 3px white;
 }
 
 .vid-text p {
@@ -146,31 +151,29 @@
 }
 
 .artist h2 {
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 3% 1% 1% 1%;
 }
-.artist h3 {
-  font-size: 1rem;
-}
+
 .right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 30%;
   font-family: 'Lato', sans-serif;
 }
 .bios {
   width: 80%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
   box-shadow: 2px 2px 50px rgb(204, 204, 204);
   overflow: hidden;
   border-radius: 25px;
   border: solid #A489A0 10px;
-  
+  margin: 0px 0px 20px 0px;
 }
 
 .text-container {
@@ -178,11 +181,12 @@
   flex-direction: column;
   justify-content: center;
   width: 90%;
-  height: 90%;
+  height: 500px;
+  margin: 10% 0% 0% 0%;
 }
 
 .music-player {
-  height: 24vh;
+  height: 170px;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -193,34 +197,40 @@
 
 .horiz-control {
   width: 80%;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-radius: 25px;
+  border: solid blue 1px;
 }
 
 .time-control {
   display: flex;
   flex-direction: row;
+  align-content: center;
   width: 100%;
-  height: 12vh;
+  height: 65px;
+  border: solid yellow 2px;
 }
 
 .time-control input {
   width: 100%;
-  padding: 1rem 0rem;
+  padding: 1% 0%;
 }
 
 .time-control p {
-  padding: 1rem;
+  padding: 1%;
 }
 
 .play-control {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
-  height: 12vh;
+  height: 65px;
+  border: solid 2px green
 }
 
 .play-control svg {
@@ -230,35 +240,38 @@
 .volume-control {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 20%;
-  height: 20vh;
+  height: 100%;
   border-radius: 25px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 0;
   margin: 0;
+  border: solid 2px orange;
 }
 
 .vc-input {
   display: flex;
   flex-direction: row;
-  align-content: left;
+  align-items: left;
   transform: rotate(270deg);
-  width: 9vw;
-  height: 40%;
+  width: 160%;
+  height: 60px;
   padding: 0;
   margin: 0;
+  border: solid 1px teal;
 }
 .vc-input input {
-  width: 70%;
+  width: 100%;
   align-items: right;
 }
 
-
+.mute {
+  height: 30%;
+}
 
 .mute svg {
-
   cursor: pointer;
 }
 

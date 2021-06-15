@@ -128,6 +128,7 @@ const setVolume = (e) => {
                     onChange={setVolume}
                     type="range" />
                 </div>
+                <div><br/></div>
                 <div className="mute">
                     <button onClick={() => audioMute()}>
                         <FontAwesomeIcon 
