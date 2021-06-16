@@ -5,6 +5,7 @@ const RosterPlayer = ({ artist, artists, setCurrentArtist, id, audioRef, isPlayi
     const artistSelectHandler = async () => {
         await setCurrentArtist(artist);
         if(isPlaying) audioRef.current.play();
+        
         //add active state
         const newArtist = artists.map((artist) => {
             if(artist.id === id) {
@@ -27,7 +28,7 @@ const RosterPlayer = ({ artist, artists, setCurrentArtist, id, audioRef, isPlayi
     return (
  
         <div onClick={artistSelectHandler} className={`roster-player ${artist.active ? 'selected' : ""}`}>
-            <div className="miniImg">
+            <div>
                 <img src={ artist.vid } alt={artist.name} />  
                 <h4>{artist.name}</h4>
                 <h5>{artist.title}</h5>  

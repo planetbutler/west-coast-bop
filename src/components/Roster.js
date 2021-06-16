@@ -8,14 +8,15 @@ const Roster = ({ artists, setCurrentArtist, audioRef, isPlaying, setArtists }) 
             <div className="roster-players">
                 {artists.map((artist) => (
                     <RosterPlayer 
-                    setArtists={setArtists}
-                    isPlaying={isPlaying}
-                    artists={artists}
-                    setCurrentArtist={setCurrentArtist}
-                    artist={artist} 
-                    id={artist.id}
-                    key={artist.id}
-                    audioRef={audioRef} />
+                        setArtists={setArtists}
+                        isPlaying={isPlaying}
+                        artists={artists}
+                        setCurrentArtist={setCurrentArtist}
+                        artist={artist} 
+                        id={artist.id}
+                        key={artist.id}
+                        audioRef={audioRef} 
+                    />
                 ))}
             </div>
         </div>

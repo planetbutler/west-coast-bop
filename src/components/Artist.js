@@ -10,7 +10,6 @@ const Artist = ({currentArtist}) => {
     const [isGhost, setIsGhost] = useState(true)
 
     return (
- 
         <div className="artist">
             <div className="vid-text"> 
                 <h2>{currentArtist.name}</h2>
@@ -19,12 +18,14 @@ const Artist = ({currentArtist}) => {
                     className="ghostBtn" 
                     onClick={ghostify} 
                     size="2x" 
-                    icon={isGhost ? faGhost : faMale} /></p>
+                    icon={isGhost ? faGhost : faMale} />
+                </p>
             </div>
             <div className="gifContainer">
-                <img src={isGhost ? currentArtist.vid : currentArtist.ghostVid} alt={currentArtist.name} /> 
+                <img src={isGhost ? currentArtist.vid : currentArtist.ghostVid}
+                 alt={currentArtist.name} 
+                /> 
             </div>
-            
         </div>
     )
 }

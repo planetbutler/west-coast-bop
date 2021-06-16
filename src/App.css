@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .App {
@@ -10,24 +10,23 @@
   align-items: center;
   height: 100vh;
   font-family: 'Fontdiner Swanky', cursive;
-  border: solid 2px red;
 }
+
  header {
-  min-height: 13%;
-  font-size: 40px;
+  height: 13%;
   padding: 1% 0 0 0;
-  border: solid 2px blue;
+  font-size: 40px;
  }
 
 .body {
-  height: 87%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  border: solid 2px green;
+  height: 87%;
 }
 
+/*left column*/
 .left {
   display: flex;
   flex-direction: column;
@@ -40,13 +39,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: center;
   align-items: center;
   width: 80%;
   height: 95%;
   border: solid aquamarine 10px;
   border-radius: 25px;
-
+  text-align: center;
 }
 
 .selected {
@@ -66,10 +64,11 @@
 }
 
 .roster-players :hover {
-  background-color: aquamarine;
   border-radius: 25px;
+  background-color: aquamarine;
 }
 
+/*center column*/
 .center {
   display: flex;
   flex-direction: column;
@@ -78,60 +77,36 @@
 }
 
 .artist {
-  font-family: 'Fontdiner Swanky', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 80%;
+  border: solid #F6830F 10px;
+  border-radius: 25px;
   background-image: url("vids/tv2.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  height: 95%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: solid #F6830F 10px;
-  border-radius: 25px;
-}
-
-.gifContainer {
-  height: 80.5%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.artist img {
-  width: 61%;
-  height: auto;
-  border-radius: 36px;
-  position: relative;
-  left: -2.4%;
-  top: -0%;
+  font-family: 'Fontdiner Swanky', cursive;
 }
 
 .vid-text {
-  /*position: absolute;*/
-  width: 80%;
-  /*top: 12%;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 80%;
   text-align: center;
-  /*height: 5.5%;*/
+  text-shadow: 3px 3px white;
 }
 
 .vid-text h2 {
-  /*height: 20%;*/
   font-size: 17px;
-  text-shadow: 3px 3px white;
 }
 
 .vid-text h3 {
-  /*height: 30%;*/
   font-size: 14px;
-  text-shadow: 3px 3px white;
 }
 
 .vid-text p {
@@ -140,13 +115,10 @@
   justify-content: flex-start;
   align-items: left;
   width: 100%;
-}
-
-.ghostBtn {
   cursor: pointer;
 }
 
-.vid-text p {
+.ghostBtn {
   cursor: pointer;
 }
 
@@ -154,6 +126,25 @@
   padding: 3% 1% 1% 1%;
 }
 
+.gifContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80.5%;
+  width: 100%;
+}
+
+.artist img {
+  position: relative;
+  left: -2.4%;
+  top: -0%;
+  width: 61%;
+  height: auto;
+  border-radius: 36px;
+}
+
+/*right column*/
 .right {
   display: flex;
   flex-direction: column;
@@ -162,15 +153,15 @@
   width: 30%;
   font-family: 'Lato', sans-serif;
 }
+
 .bios {
-  width: 80%;
-  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 50px rgb(204, 204, 204);
   overflow: hidden;
+  width: 80%;
+  height: 60%;
   border-radius: 25px;
   border: solid #A489A0 10px;
   margin: 0px 0px 20px 0px;
@@ -186,23 +177,22 @@
 }
 
 .music-player {
-  height: 170px;
-  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 170px;
+  width: 80%;
   border: solid #F91C0C 10px;
   border-radius: 25px;;
 }
 
 .horiz-control {
-  width: 80%;
-  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
+  height: 100%;
   border-radius: 25px;
-  border: solid blue 1px;
 }
 
 .time-control {
@@ -211,7 +201,6 @@
   align-content: center;
   width: 100%;
   height: 65px;
-  border: solid yellow 2px;
 }
 
 .time-control input {
@@ -230,7 +219,6 @@
   align-items: center;
   width: 100%;
   height: 65px;
-  border: solid 2px green
 }
 
 .play-control svg {
@@ -240,31 +228,29 @@
 .volume-control {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 20%;
   height: 100%;
   border-radius: 25px;
-  /*overflow: hidden;*/
   padding: 0;
   margin: 0;
-  border: solid 2px orange;
 }
 
 .vc-input {
   display: flex;
   flex-direction: row;
-  align-items: left;
   transform: rotate(270deg);
+  align-items: left;
   width: 160%;
   height: 60px;
   padding: 0;
   margin: 0;
-  border: solid 1px teal;
 }
+
 .vc-input input {
-  width: 100%;
   align-items: right;
+  width: 100%;
 }
 
 .mute {

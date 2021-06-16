@@ -38,11 +38,12 @@ const tuneEndHandler = async () => {
       <div className="body">
         <div className="left">
           <Roster
-          setArtists={setArtists} 
-          isPlaying={isPlaying}
-          audioRef={audioRef}
-          artists={artists}
-          setCurrentArtist={setCurrentArtist}/>
+            setArtists={setArtists} 
+            isPlaying={isPlaying}
+            audioRef={audioRef}
+            artists={artists}
+            setCurrentArtist={setCurrentArtist}
+          />
           <audio 
             onLoadedMetadata={timeUpdateHandler}
             onTimeUpdate={timeUpdateHandler} 
@@ -56,17 +57,19 @@ const tuneEndHandler = async () => {
         </div>
         <div className="right">
           <Bio
-          currentArtist={currentArtist}/>
+            currentArtist={currentArtist}
+          />
           <MusicPlayer
-          setArtists={setArtists}
-          setCurrentArtist={setCurrentArtist}
-          artists={artists}
-          setTuneInfo={setTuneInfo}
-          tuneInfo={tuneInfo}
-          audioRef={audioRef} 
-          setIsPlaying={setIsPlaying}
-          isPlaying={isPlaying}
-          currentArtist={currentArtist} />
+            setArtists={setArtists}
+            setCurrentArtist={setCurrentArtist}
+            artists={artists}
+            setTuneInfo={setTuneInfo}
+            tuneInfo={tuneInfo}
+            audioRef={audioRef} 
+            setIsPlaying={setIsPlaying}
+            isPlaying={isPlaying}
+            currentArtist={currentArtist} 
+          />
         </div>
       </div>
     </div>
