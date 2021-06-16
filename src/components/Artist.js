@@ -14,16 +14,19 @@ const Artist = ({currentArtist}) => {
             <div className="vid-text"> 
                 <h2>{currentArtist.name}</h2>
                 <h3>{currentArtist.title}</h3> 
-                <p onClick={ghostify}>{isGhost ? 'Ghostify' : 'Unghost'} &nbsp;<FontAwesomeIcon 
-                    className="ghostBtn" 
-                    onClick={ghostify} 
-                    size="2x" 
-                    icon={isGhost ? faGhost : faMale} />
+                <p onClick={ghostify}>{isGhost ? 'Ghostify' : 'Unghost'} &nbsp;
+                    <FontAwesomeIcon 
+                        className="ghostBtn" 
+                        onClick={ghostify} 
+                        size="2x" 
+                        icon={isGhost ? faGhost : faMale} 
+                    />
                 </p>
             </div>
             <div className="gifContainer">
-                <img src={isGhost ? currentArtist.vid : currentArtist.ghostVid}
-                 alt={currentArtist.name} 
+                <img 
+                    src={isGhost ? currentArtist.vid : currentArtist.ghostVid}
+                    alt={currentArtist.name} 
                 /> 
             </div>
         </div>
