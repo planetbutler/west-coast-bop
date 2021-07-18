@@ -26,7 +26,7 @@
   height: 87%;
 }
 
-/*left column*/
+/*left column*/ 
 .left {
   display: flex;
   flex-direction: column;
