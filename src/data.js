@@ -141,7 +141,7 @@ function musicSource() {
             <li>Born in 1930 Wilmington, DE</li><br/>
             <li>Studied music with Philadelphia musician, Robert Boysie Lowery</li><br/>
             <li>Played with the bands of Art Blakey, Tadd Dameron, Lionel Hampton, and JJ Johnson</li><br/>
-            <li>Formed a long-time grooup with drummer, Max Roach</li><br/>
+            <li>Formed a long-time group with drummer, Max Roach</li><br/>
             <li>Stayed away from drugs</li><br/>
             <li>Composer of jazz standards, 'Jordu,' 'Daahoud,' 'Joy Spring,' and 'Sandu'</li><br/>
             <li>Died in a car crash at the age of 25</li><br/>
